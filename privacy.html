@@ -50,26 +50,35 @@
   that collects user data.</p>
 
   <h2>What stays local, and what leaves your computer</h2>
-  <p><strong>Stays local, always:</strong> your release files (audio,
-  artwork, video, lyrics), draft campaigns, generated captions and
-  content, app settings, and any connected-platform credentials or
-  access tokens. None of this is sent to Maestro's developers or to any
-  server Maestro operates — because Maestro doesn't operate one.</p>
+  <p>Maestro stores its working state — release files (audio, artwork,
+  video, lyrics), draft campaigns, generated captions and content, and
+  app settings — locally on your computer by default. None of this is
+  sent to Maestro's developers or to any server Maestro operates,
+  because Maestro doesn't operate one. Maestro does not run in a mode
+  where everything is guaranteed to stay local, though: which of the
+  below actually happens depends on how you've configured it.</p>
+  <p><strong>Credentials and access tokens</strong> for connected
+  platforms stay local and are not intentionally sent to an AI
+  provider — only to the platform they belong to, and only as part of a
+  connection you've authorized.</p>
+  <p><strong>Sent to an AI provider</strong> — Maestro can generate
+  captions and content using a local generator with no external AI call
+  at all, or using an external AI provider you've explicitly configured
+  (for example OpenRouter). When an external provider is configured,
+  Maestro sends it the minimum relevant text/context needed for that
+  specific generation task — for example the song title, genre, or
+  lyrics you've supplied — to produce a caption or campaign draft. That
+  provider's own privacy policy governs how they handle what's sent to
+  them. Raw media files (audio, video, artwork) are not sent to an AI
+  provider — only text-based context is used for AI-generated captions
+  and descriptions.</p>
   <p><strong>Sent to a connected platform</strong> (TikTok, YouTube, or
   Instagram) — only when you've explicitly connected that platform and
-  explicitly approved a specific publish: the approved content itself
+  explicitly authorized a specific publish: the approved content itself
   (e.g. the video, image, caption, or title), sent directly from your
-  computer to that platform's own API. Maestro does not relay this
-  through any server of its own.</p>
-  <p><strong>Sent to an AI provider</strong> — only when you've
-  configured one. By default Maestro generates captions and content
-  entirely offline, on your own computer, with no external AI call at
-  all. If you choose to configure an external AI provider instead, the
-  specific release/campaign content needed to generate a response (for
-  example, the song title, genre, or lyrics you've supplied) is sent to
-  that provider's API to produce the draft. That provider's own privacy
-  policy governs how they handle it; Maestro does not send anything to
-  an AI provider unless you've explicitly turned this on.</p>
+  computer to that platform's own API. This is the only point at which
+  media (video, image, or audio) actually leaves your device. Maestro
+  does not relay this through any server of its own.</p>
 
   <h2>TikTok specifically</h2>
   <p>Maestro requests the <code>video.publish</code> permission from
