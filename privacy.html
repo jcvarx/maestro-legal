@@ -45,18 +45,42 @@
   <h2>Local-first by design</h2>
   <p>Maestro runs on the user's own computer. Release information, draft
   campaigns, generated content, and settings are stored locally on that
-  computer unless the user chooses to connect a third-party platform (see
-  below). Maestro does not operate a central server that collects user
-  data.</p>
+  computer unless the user chooses to connect a third-party platform or
+  AI provider (see below). Maestro does not operate a central server
+  that collects user data.</p>
 
-  <h2>Third-party platforms</h2>
-  <p>Maestro can connect to third-party services — currently TikTok,
-  YouTube, and Instagram — but only when the user explicitly provides
-  credentials for that specific platform and authorizes the connection.
-  Nothing is sent to a third-party platform unless the user has set this
-  up themselves. Each of these platforms has its own privacy policy and
-  terms, which govern how they handle any data exchanged with them
-  independently of this policy.</p>
+  <h2>What stays local, and what leaves your computer</h2>
+  <p><strong>Stays local, always:</strong> your release files (audio,
+  artwork, video, lyrics), draft campaigns, generated captions and
+  content, app settings, and any connected-platform credentials or
+  access tokens. None of this is sent to Maestro's developers or to any
+  server Maestro operates — because Maestro doesn't operate one.</p>
+  <p><strong>Sent to a connected platform</strong> (TikTok, YouTube, or
+  Instagram) — only when you've explicitly connected that platform and
+  explicitly approved a specific publish: the approved content itself
+  (e.g. the video, image, caption, or title), sent directly from your
+  computer to that platform's own API. Maestro does not relay this
+  through any server of its own.</p>
+  <p><strong>Sent to an AI provider</strong> — only when you've
+  configured one. By default Maestro generates captions and content
+  entirely offline, on your own computer, with no external AI call at
+  all. If you choose to configure an external AI provider instead, the
+  specific release/campaign content needed to generate a response (for
+  example, the song title, genre, or lyrics you've supplied) is sent to
+  that provider's API to produce the draft. That provider's own privacy
+  policy governs how they handle it; Maestro does not send anything to
+  an AI provider unless you've explicitly turned this on.</p>
+
+  <h2>TikTok specifically</h2>
+  <p>Maestro requests the <code>video.publish</code> permission from
+  TikTok, used only to post content you've explicitly approved to your
+  own connected TikTok account. TikTok's own login process separately
+  includes basic profile identification as a standard part of
+  connecting any account (via TikTok Login Kit) — Maestro uses this only
+  to maintain the connection itself and does not read, store, or share
+  it beyond that. Maestro does not access your TikTok followers, direct
+  messages, or any content beyond what you explicitly approve for
+  posting.</p>
 
   <h2>Credentials and access tokens</h2>
   <p>Access tokens and credentials for connected platforms are stored
@@ -78,11 +102,24 @@
   itself is local software, not a hosted web service, and does not track
   usage.</p>
 
-  <h2>Revoking access</h2>
-  <p>The user can revoke Maestro's access to any connected platform at
-  any time, directly from that platform's own account settings (for
-  example, TikTok's or Google's connected-apps page). Doing so
-  immediately invalidates the corresponding access token.</p>
+  <h2>Revoking access, and deleting your data</h2>
+  <p>You can revoke Maestro's access to any connected platform at any
+  time, directly from that platform's own account settings (for example,
+  TikTok's or Google's connected-apps page). Doing so immediately
+  invalidates the corresponding access token.</p>
+  <p>Because Maestro has no server-side account, there is nothing to
+  delete on our end. Deleting the Maestro application and its local data
+  folder from your computer removes everything it stored — releases,
+  drafts, credentials, and settings alike.</p>
+
+  <h2>What we don't claim</h2>
+  <p>This is an early-stage private beta, not a certified or audited
+  service. We don't claim compliance with any specific data-protection
+  certification or framework, don't guarantee encryption of locally
+  stored files beyond whatever your own operating system already
+  provides, and don't commit to a specific data-retention period — your
+  data stays on your own device for as long as you keep it there, and
+  is removed when you remove it.</p>
 
   <h2>Changes to this policy</h2>
   <p>This policy may be updated as Maestro develops. The "Last updated"
