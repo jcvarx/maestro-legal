@@ -9,7 +9,7 @@
   body {
     max-width: 40rem;
     margin: 4rem auto;
-    padding: 0 1.25rem;
+    padding: 0 1.25rem 4rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #1a1a1a;
@@ -20,13 +20,16 @@
     a { color: #7ab8ff; }
   }
   h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.1rem; margin-top: 2.25rem; }
   p.tagline { color: #666; margin-top: 0; }
   @media (prefers-color-scheme: dark) { p.tagline { color: #9aa0a6; } }
-  ul.links { list-style: none; padding: 0; margin-top: 2rem; }
-  ul.links li { margin: 0.5rem 0; }
+  ul.links { list-style: none; padding: 0; margin-top: 0.5rem; }
+  ul.links li { margin: 0.4rem 0; }
+  ol { padding-left: 1.25rem; }
   a { color: #0b5fff; text-decoration: none; }
   a:hover { text-decoration: underline; }
   footer { margin-top: 3rem; font-size: 0.85rem; color: #888; }
+  nav.legal { margin-top: 2.5rem; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -34,13 +37,46 @@
   <p class="tagline">A local, approval-first artist-management tool.</p>
 
   <p>Maestro helps an independent musician prepare and manage social media
-  campaigns. It runs locally and never publishes or posts anywhere without
-  the artist's explicit, human approval.</p>
+  campaigns from a release folder — audio, artwork, lyrics, and video —
+  and connect to social platforms when the artist chooses to. It runs
+  locally, on the artist's own computer, and never publishes or posts
+  anywhere without the artist's explicit, human approval.</p>
 
-  <ul class="links">
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
-  </ul>
+  <h2>How it works</h2>
+  <ol>
+    <li>The artist provides release material (audio, artwork, lyrics,
+    and optionally video) in a local folder.</li>
+    <li>Maestro drafts platform-specific content — captions, titles,
+    descriptions — grounded in that material.</li>
+    <li>The artist reviews and approves (or edits, or rejects) each
+    draft. Nothing moves forward without this step.</li>
+    <li>Only for content the artist has approved, Maestro prepares a
+    platform-specific package (for example, a TikTok post or a YouTube
+    video).</li>
+    <li>Publishing itself requires a second, separate, explicit
+    approval — creative approval and publishing approval are never the
+    same step.</li>
+    <li>Only then does Maestro send the approved content to the
+    connected platform, using that platform's own official API.</li>
+  </ol>
+
+  <h2>Connected platforms</h2>
+  <p>Maestro can connect to Instagram, TikTok, and YouTube, each only
+  when the artist explicitly authorizes that specific connection.
+  Maestro uses each platform's official API directly — no browser
+  automation, no unofficial endpoints. See the Privacy Policy for
+  exactly what data is involved in each connection.</p>
+
+  <h2>Who this is for</h2>
+  <p>Maestro is currently an early-stage private beta, built for and
+  used by one independent artist. It is not yet a public product.</p>
+
+  <nav class="legal">
+    <ul class="links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+  </nav>
 
   <footer>Maestro — early-stage, private beta.</footer>
 </body>
