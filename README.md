@@ -34,13 +34,10 @@ Resulting pages:
 - `https://jcvarx.github.io/maestro-legal/privacy.html`
 - `https://jcvarx.github.io/maestro-legal/terms.html`
 
-## Before submitting these URLs anywhere
+## Contact
 
-Both `privacy.html` and `terms.html` contain a placeholder —
-`[CONTACT EMAIL PLACEHOLDER — add a real address here before relying
-on this page]` — in place of a contact email, since no public contact
-address was available when these were written. Replace it with a real
-address before relying on these pages for a platform submission.
+Both `privacy.html` and `terms.html` list `sobdiamusic@gmail.com` as
+the contact address for questions about those pages.
 
 ## Keeping this repo minimal
 
